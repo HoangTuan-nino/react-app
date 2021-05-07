@@ -1,0 +1,6 @@
+.bg-color{
+    display: flex;
+    flex-direction: row;
+    width: 1200px;
+    align-items: center;
+}
