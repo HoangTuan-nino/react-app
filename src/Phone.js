@@ -12,7 +12,7 @@ export class Phone extends Component {
                 {
                     id: '1',
                     name: 'Realme 8',
-                    price: '9.900.000',
+                    price: '9900000',
                     subprice: '9.490.000',
                     discount: '5%',
                     image:
@@ -21,7 +21,7 @@ export class Phone extends Component {
                 {
                     id: '2',
                     name: 'Realme 7',
-                    price: '8.900.000',
+                    price: '8900000',
                     subprice: '9.490.000',
                     discount: '5%',
                     image:
@@ -30,7 +30,7 @@ export class Phone extends Component {
                 {
                     id: '3',
                     name: 'Realme 6',
-                    price: '7.900.000',
+                    price: '7900000',
                     subprice: '9.490.000',
                     discount: '5%',
                     image:
@@ -39,7 +39,7 @@ export class Phone extends Component {
                 {
                     id: '4',
                     name: 'Realme 5',
-                    price: '6.900.000',
+                    price: '6900000',
                     subprice: '9.490.000',
                     discount: '5%',
                     image:
@@ -48,7 +48,7 @@ export class Phone extends Component {
                 {
                     id: '5',
                     name: 'Realme 4',
-                    price: '5.900.000',
+                    price: '5900000',
                     subprice: '9.490.000',
                     discount: '5%',
                     image:
@@ -64,7 +64,7 @@ export class Phone extends Component {
         })
     }
     render() {
-        const phones = this.state.phones;
+        const phones = this.state.phones
         return (
             <div className="container">
                 <div className="header">
@@ -79,9 +79,27 @@ export class Phone extends Component {
                 <div className="list-item">
                     {phones.map((item) => {
                         return (
-                            <ChildComp showName={this.showName} item={item} key={item.id}/>
+                            <ChildComp
+                                showName={this.showName}
+                                item={item}
+                                key={item.id}
+                            />
                         )
                     })}
+
+                    {/* Filter phone price below 7m */}
+
+                    {/* {phones
+                        .filter((phone) => phone.price < 7000000)
+                        .map((filterPhone) => {
+                            return (
+                                <ChildComp
+                                    showName={this.showName}
+                                    item={filterPhone}
+                                    key={filterPhone.id}
+                                />
+                            )
+                        })} */}
                 </div>
             </div>
         )
